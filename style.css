@@ -159,8 +159,6 @@ ul {
   left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(29, 54, 72, 0.85);
-  backdrop-filter: blur(6px);
 }
 
 .nav {
@@ -490,7 +488,7 @@ ul {
    MODEL PLAN
    =========================== */
 .plan-section {
-  background: var(--color-light-blue);
+  background: #ffffff;
   padding: var(--section-padding);
 }
 
@@ -594,7 +592,7 @@ ul {
    CTA
    =========================== */
 .cta {
-  background: var(--color-light-blue);
+  background: #D9EEFF;
   padding: 80px 60px;
   text-align: center;
   border-top: 2px solid rgba(29, 54, 72, 0.08);
@@ -618,14 +616,14 @@ ul {
    Footer
    =========================== */
 .footer {
-  background: var(--color-navy);
-  padding: 32px 60px;
+  background: #ffffff;
+  padding: 16px 30px;
   text-align: center;
 }
 .footer-copy {
   font-family: var(--font-serif);
   font-weight: 500;
   font-size: 16px;
-  color: var(--color-light-blue);
+  color: #1D3648;
   letter-spacing: 1px;
 }
