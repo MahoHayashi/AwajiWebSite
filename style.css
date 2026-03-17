@@ -72,6 +72,7 @@ ul {
 .btn-official {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-family: var(--font-serif);
   font-weight: 900;
@@ -92,6 +93,9 @@ ul {
   background: var(--color-blue);
   color: var(--color-white);
 }
+.btn-official--blue:hover img {
+  filter: brightness(0) invert(1);
+}
 .btn-official--orange {
   color: var(--color-orange);
   border: 2px solid var(--color-orange);
@@ -99,6 +103,9 @@ ul {
 .btn-official--orange:hover {
   background: var(--color-orange);
   color: var(--color-white);
+}
+.btn-official--orange:hover img {
+  filter: brightness(0) invert(1);
 }
 
 /* Spot info box */
@@ -117,6 +124,15 @@ ul {
   font-size: 16px;
   font-weight: 500;
   color: var(--color-navy);
+}
+.spot-info-label {
+  flex-shrink: 0;
+  width: 5em;
+  text-align: left;
+}
+.spot-info-value {
+  flex-shrink: 0;
+  text-align: left;
 }
 
 /* Spot info table */
@@ -409,7 +425,7 @@ ul {
 
 .spot-card {
   max-width: var(--max-width);
-  margin: 0 auto 80px;
+  margin: 0 auto 200px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -475,7 +491,7 @@ ul {
 
 .gourmet-card {
   max-width: var(--max-width);
-  margin: 0 auto 80px;
+  margin: 0 auto 200px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -489,6 +505,7 @@ ul {
 .gourmet-card-right {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .gourmet-img-tall {
