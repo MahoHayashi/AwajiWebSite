@@ -100,6 +100,9 @@ ul {
 .spot-info-box {
   background: #D9EEFF;
 }
+.gourmet-section .spot-info-box {
+  background: #FFE7C9;
+}
 .spot-info-row {
   display: flex;
   align-items: center;
