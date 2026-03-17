@@ -292,12 +292,20 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 386px;
+  align-items: center;
+}
+.about-col-left .about-text {
+  text-align: center;
 }
 .about-col-right {
   display: flex;
   flex-direction: column;
   gap: 386px;
   padding-top: 247px;
+  align-items: center;
+}
+.about-col-right .about-text {
+  text-align: center;
 }
 .about-img {
   width: 100%;
