@@ -32,6 +32,7 @@ function drawMapConnectors() {
     const angle = Math.atan2(dy, dx) * (180 / Math.PI);
 
     const line = document.createElement('div');
+    line.className = 'map-connector';
     line.style.cssText = `position:absolute;left:${x1}px;top:${y1}px;width:${length}px;height:1px;background:${color};transform-origin:left center;transform:rotate(${angle}deg);pointer-events:none;`;
     mapIllustration.insertBefore(line, firstIcon);
   }
@@ -44,7 +45,21 @@ function drawMapConnectors() {
   addLine(document.querySelector('.map-icon--g3'), document.querySelector('.map-spots--left .map-spot-item:nth-child(3) .map-spot-name--orange'),  '#f6ad4f', true);
 }
 
-window.addEventListener('load', () => setTimeout(drawMapConnectors, 500));
+// ハンバーガーメニュー
+const hamburger = document.querySelector('.nav-hamburger');
+const navMenu = document.querySelector('.nav-menu');
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('is-open');
+  });
+  navMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navMenu.classList.remove('is-open'));
+  });
+}
+
+window.addEventListener('load', () => {
+  if (window.innerWidth > 390) setTimeout(drawMapConnectors, 500);
+});
 
 // Fade-in on scroll
 const fadeObserver = new IntersectionObserver(
