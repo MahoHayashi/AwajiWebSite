@@ -45,3 +45,18 @@ function drawMapConnectors() {
 }
 
 window.addEventListener('load', () => setTimeout(drawMapConnectors, 500));
+
+// Fade-in on scroll
+const fadeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));

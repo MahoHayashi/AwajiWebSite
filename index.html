@@ -39,7 +39,7 @@
   </section>
 
   <!-- ===== ABOUT ===== -->
-  <section id="about" class="about">
+  <section id="about" class="about fade-in">
     <div class="about-grid">
       <!-- 左列：写真 → テキスト -->
       <div class="about-col-left">
@@ -58,31 +58,36 @@
     </div>
   </section>
 
+  <!-- wave divider (→ map) -->
+  <div class="wave-divider wave-divider--flip">
+    <img src="https://www.figma.com/api/mcp/asset/f6db63a7-6cbf-4370-9606-3b6920c48144" alt="">
+  </div>
+
   <!-- ===== MAP ===== -->
-  <section id="map" class="map-section">
+  <section id="map" class="map-section fade-in">
     <h2 class="section-title section-title--orange">MAP</h2>
     <div class="map-content">
 
       <!-- 左列スポット -->
       <div class="map-spots map-spots--left">
-        <div class="map-spot-item">
+        <a class="map-spot-item" href="#gourmet-miele">
             <span class="map-spot-name map-spot-name--orange">miele</span>
           <div class="map-spot-thumb">
             <img src="images/miele-item.png" alt="miele">
           </div>
-        </div>
-        <div class="map-spot-item">
+        </a>
+        <a class="map-spot-item" href="#spot-parche">
             <span class="map-spot-name map-spot-name--blue">パルシェ 香りの館</span>
           <div class="map-spot-thumb">
             <img src="images/parche-spot.png" alt="パルシェ 香りの館">
           </div>
-        </div>
-        <div class="map-spot-item">
+        </a>
+        <a class="map-spot-item" href="#spot-england">
             <span class="map-spot-name map-spot-name--orange">イングランドの丘</span>
           <div class="map-spot-thumb">
             <img src="images/england-spot.png" alt="イングランドの丘">
           </div>
-        </div>
+        </a>
       </div>
 
       <!-- 中央：淡路島マップイラスト -->
@@ -98,35 +103,35 @@
 
       <!-- 右列スポット -->
       <div class="map-spots map-spots--right">
-        <div class="map-spot-item map-spot-item--right">
+        <a class="map-spot-item map-spot-item--right" href="#spot-kitty">
           <span class="map-spot-name map-spot-name--blue">Hello Kitty Smile</span>
           <div class="map-spot-thumb">
             <img src="images/kitty-spot.png" alt="Hello Kitty Smile">
           </div>
-        </div>
-        <div class="map-spot-item map-spot-item--right">
+        </a>
+        <a class="map-spot-item map-spot-item--right" href="#gourmet-pancake">
           <span class="map-spot-name map-spot-name--orange">幸せのパンケーキ</span>
           <div class="map-spot-thumb">
             <img src="images/pancake-gourmet.png" alt="幸せのパンケーキ">
           </div>
-        </div>
-        <div class="map-spot-item map-spot-item--right">
+        </a>
+        <a class="map-spot-item map-spot-item--right" href="#gourmet-cafe">
           <span class="map-spot-name map-spot-name--blue">玉ねぎ倉庫跡地 志知カフェ</span>
           <div class="map-spot-thumb">
             <img src="images/cafe-gourmet.png" alt="志知カフェ">
           </div>
-        </div>
+        </a>
       </div>
 
     </div>
   </section>
 
   <!-- ===== SPOT ===== -->
-  <section id="spot" class="spot-section">
+  <section id="spot" class="spot-section fade-in">
     <h2 class="section-title section-title--blue">SPOT</h2>
 
     <!-- Hello Kitty Smile -->
-    <article class="spot-card">
+    <article id="spot-kitty" class="spot-card">
       <div class="spot-card-left">
         <img src="images/kitty-bg.png"
              alt="Hello Kitty Smile" class="spot-img-main">
@@ -151,7 +156,7 @@
     </article>
 
     <!-- パルシェ 香りの館 -->
-    <article class="spot-card">
+    <article id="spot-parche" class="spot-card">
       <div class="spot-card-left">
         <img src="images/parche-bg.png"
              alt="パルシェ 香りの館" class="spot-img-main">
@@ -176,7 +181,7 @@
     </article>
 
     <!-- イングランドの丘 -->
-    <article class="spot-card">
+    <article id="spot-england" class="spot-card">
       <div class="spot-card-left">
         <img src="images/england-bg.png"
              alt="イングランドの丘" class="spot-img-main">
@@ -203,11 +208,11 @@
   </section>
 
   <!-- ===== GOURMET ===== -->
-  <section id="gourmet" class="gourmet-section">
+  <section id="gourmet" class="gourmet-section fade-in">
     <h2 class="section-title section-title--orange">GOURMET</h2>
 
     <!-- miele -->
-    <article class="gourmet-card">
+    <article id="gourmet-miele" class="gourmet-card">
       <div class="gourmet-card-left">
         <img src="https://www.figma.com/api/mcp/asset/f6d8a219-9e8a-4083-8cb2-d0c4eacb9eee"
              alt="miele" class="gourmet-img-tall">
@@ -232,7 +237,7 @@
     </article>
 
     <!-- 幸せのパンケーキ -->
-    <article class="gourmet-card">
+    <article id="gourmet-pancake" class="gourmet-card">
       <div class="gourmet-card-left">
         <img src="https://www.figma.com/api/mcp/asset/99f80023-273b-4172-a89d-104473999bb7"
              alt="幸せのパンケーキ" class="gourmet-img-tall">
@@ -257,7 +262,7 @@
     </article>
 
     <!-- 玉ねぎ倉庫跡地 志知カフェ -->
-    <article class="gourmet-card">
+    <article id="gourmet-cafe" class="gourmet-card">
       <div class="gourmet-card-left">
         <img src="https://www.figma.com/api/mcp/asset/90dff2a5-dea7-4682-95f9-1eb597e65f27"
              alt="志知カフェ" class="gourmet-img-tall">
@@ -284,7 +289,7 @@
   </section>
 
   <!-- ===== MODEL PLAN ===== -->
-  <section id="plan" class="plan-section">
+  <section id="plan" class="plan-section fade-in">
     <h2 class="section-title section-title--blue">MODEL PLAN</h2>
 
     <div class="timeline">
@@ -370,7 +375,7 @@
   </div>
 
   <!-- ===== CTA ===== -->
-  <section class="cta">
+  <section class="cta fade-in">
     <p class="cta-line">
       <span class="text-navy">観光だけじゃない、</span><span class="text-orange">ちょっと特別な週末。</span>
     </p>
