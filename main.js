@@ -51,13 +51,20 @@ function drawMapConnectors() {
 // ハンバーガーメニュー
 const hamburger = document.querySelector('.nav-hamburger');
 const navMenu = document.querySelector('.nav-menu');
+const navOverlay = document.querySelector('.nav-overlay');
+function closeMenu() {
+  navMenu.classList.remove('is-open');
+  navOverlay.classList.remove('is-open');
+}
 if (hamburger && navMenu) {
   hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('is-open');
+    navOverlay.classList.toggle('is-open');
   });
   navMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => navMenu.classList.remove('is-open'));
+    a.addEventListener('click', closeMenu);
   });
+  navOverlay.addEventListener('click', closeMenu);
 }
 
 window.addEventListener('load', () => setTimeout(drawMapConnectors, 500));
