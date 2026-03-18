@@ -366,6 +366,7 @@ ul {
 .map-section {
   padding: var(--section-padding);
   background: var(--color-white);
+  overflow-x: hidden;
 }
 
 .map-content {
@@ -719,7 +720,7 @@ ul {
 .timeline-time {
   font-family: var(--font-serif);
   font-weight: 900;
-  font-size: 40px;
+  font-size: clamp(15px, 3vw, 40px);
   color: var(--color-navy);
   display: block;
   position: relative;
@@ -777,7 +778,7 @@ ul {
 .cta-line {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: 32px;
+  font-size: clamp(15px, 2.5vw, 32px);
   line-height: 1.8;
   letter-spacing: 0.3em;
   display: block;
@@ -938,7 +939,7 @@ ul {
   .map-spot-thumb { display: none; }
   .map-illustration > img:first-child { max-width: 100%; }
   .map-icon { width: 22px; }
-  .map-connector { display: none; }
+
 
   /* --- SPOT --- */
   .spot-card {

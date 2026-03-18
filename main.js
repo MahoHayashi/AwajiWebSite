@@ -13,6 +13,9 @@ function drawMapConnectors() {
   const mapIllustration = document.querySelector('.map-illustration');
   if (!mapIllustration) return;
 
+  // 既存の線を削除
+  mapIllustration.querySelectorAll('.map-connector').forEach(el => el.remove());
+
   const illustrationRect = mapIllustration.getBoundingClientRect();
   const firstIcon = mapIllustration.querySelector('.map-icon');
 
@@ -57,8 +60,13 @@ if (hamburger && navMenu) {
   });
 }
 
-window.addEventListener('load', () => {
-  if (window.innerWidth > 390) setTimeout(drawMapConnectors, 500);
+window.addEventListener('load', () => setTimeout(drawMapConnectors, 500));
+
+// リサイズ時に再描画（デバウンス）
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(drawMapConnectors, 200);
 });
 
 // Fade-in on scroll
