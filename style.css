@@ -356,6 +356,7 @@ ul {
 }
 
 .map-content {
+  position: relative;
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
@@ -377,9 +378,13 @@ ul {
 }
 .map-spots--left .map-spot-item {
   flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
 }
 .map-spots--right .map-spot-item {
   flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
 }
 
 /* 右列：サムネイル左・テキスト右 / 左端寄せ */
@@ -406,6 +411,19 @@ ul {
   align-items: center;
 }
 
+.map-spots--left .map-spot-item .map-spot-name--orange,
+.map-spots--right .map-spot-item .map-spot-name--orange {
+  display: block;
+  width: 60%;
+  border-bottom: 1px solid var(--color-orange);
+}
+.map-spots--left .map-spot-item .map-spot-name--blue,
+.map-spots--right .map-spot-item .map-spot-name--blue {
+  display: block;
+  width: 60%;
+  border-bottom: 1px solid var(--color-blue);
+}
+
 .map-spot-thumb {
   flex-shrink: 0;
 }
@@ -413,6 +431,16 @@ ul {
   width: 60%;
   height: auto;
 }
+.map-spot-item:has(.map-spot-name--orange) .map-spot-thumb img {
+  box-shadow: 8px 8px 0 #FFE7C9;
+}
+.map-spot-item:has(.map-spot-name--blue) .map-spot-thumb img {
+  box-shadow: 8px 8px 0 #D9EEFF;
+}
+/* .map-spots--left .map-spot-thumb img {
+  width: auto;
+  max-width: 200px;
+} */
 
 .map-spot-name {
   font-family: var(--font-serif);
@@ -428,14 +456,27 @@ ul {
 }
 
 .map-illustration {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
 }
-.map-illustration img {
+.map-illustration > img:first-child {
   width: 100%;
   max-width: 420px;
   height: auto;
+  display: block;
 }
+.map-icon {
+  position: absolute;
+  width: 36px;
+  height: auto;
+}
+.map-icon--s1 { left: 43%; top: 45%; }
+.map-icon--s2 { left: 71%; top: 21%; }
+.map-icon--s3 { left: 39%; top: 77%; }
+.map-icon--g1 { left: 59%; top: 27%; }
+.map-icon--g2 { left: 50%; top: 35%; }
+.map-icon--g3 { left: 28%; top: 82%; }
 
 /* ===========================
    SPOT
@@ -479,7 +520,7 @@ ul {
   font-size: 24px;
   letter-spacing: 0.72px;
 }
-.spot-name--blue   { color: var(--color-blue); }
+.spot-name--blue   { color: #1D3648; }
 .spot-name--orange { color: var(--color-orange); }
 
 .spot-desc {
@@ -554,7 +595,7 @@ ul {
   letter-spacing: 2.4px;
   margin-bottom: 14px;
 }
-.gourmet-name--orange { color: var(--color-orange); }
+.gourmet-name--orange { color: #1D3648; }
 .gourmet-name--blue   { color: var(--color-blue); }
 
 .gourmet-desc {

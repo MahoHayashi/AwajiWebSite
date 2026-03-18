@@ -78,7 +78,7 @@
           </div>
         </div>
         <div class="map-spot-item">
-            <span class="map-spot-name map-spot-name--orange">イングランドの丘</span>s
+            <span class="map-spot-name map-spot-name--orange">イングランドの丘</span>
           <div class="map-spot-thumb">
             <img src="images/england-spot.png" alt="イングランドの丘">
           </div>
@@ -88,6 +88,12 @@
       <!-- 中央：淡路島マップイラスト -->
       <div class="map-illustration">
         <img src="https://www.figma.com/api/mcp/asset/6f802888-0fed-4998-8ed3-c81c351ff27d" alt="淡路島マップイラスト">
+        <img src="images/spot-icon.png"   alt="" class="map-icon map-icon--s1">
+        <img src="images/spot-icon.png"   alt="" class="map-icon map-icon--s2">
+        <img src="images/spot-icon.png"   alt="" class="map-icon map-icon--s3">
+        <img src="images/gourmet-icon.png" alt="" class="map-icon map-icon--g1">
+        <img src="images/gourmet-icon.png" alt="" class="map-icon map-icon--g2">
+        <img src="images/gourmet-icon.png" alt="" class="map-icon map-icon--g3">
       </div>
 
       <!-- 右列スポット -->
@@ -379,17 +385,6 @@
     <p class="footer-copy">© 2026 Awaji Trip Guide</p>
   </footer>
 
-  <script>
-    const nav = document.querySelector('.nav');
-    const hero = document.querySelector('.hero');
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        nav.style.opacity = entry.isIntersecting ? '1' : '0';
-        nav.style.pointerEvents = entry.isIntersecting ? 'auto' : 'none';
-      },
-      { threshold: 0 }
-    );
-    observer.observe(hero);
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
